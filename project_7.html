@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shiny Button hover effect</title>
+
+    <style type="text/css">
+      body{
+          background-color: #012839;
+          text-align: center;
+          padding-top: 250px;
+      }
+
+      .button{
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: 'Lato',sans-serif;
+          font-size: 24px;
+          display: inline-block;
+          position: relative;
+          text-align: center;
+          color: #00c7ec;
+          border: 1px solid #00c7ec;
+          border-radius: 0px;
+          line-height: 3em;
+          overflow: hidden;
+          padding: 0 3em;
+          box-shadow: 0 0 0 0 transparent;
+          letter-spacing: 4px;
+          transition: all 0.2s ease-in;
+      }
+      .button:hover{
+          color: #fff;
+          background-color: #00c7ec;
+          box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5);
+          transition: all 0.2s ease-out;
+      }
+      .button::before{
+          content: '';
+          display: block;
+          width: 0px;
+          height: 100%;
+          position: absolute;
+          top:0;
+          left: 0;
+          opacity: 0;
+          background-color: #fff;
+          box-shadow: 0 0 15px 3px #fff;
+          transform: skewX(-20deg);
+      }
+
+      .button:hover::before{
+          animation: shine 1s 0s linear;
+      }
+      .button:active{
+          box-shadow: 0 0 0 0 transparent;
+      }
+
+      @keyframes shine{
+          0%{
+              opacity: 0;
+              left: 0;
+          }
+          50%{
+              opacity: 1;
+          }
+          100%{
+              opacity: 0;
+              left: 100%;
+          }
+      }
+    </style> 
+</head>
+<body>
+    <a href="#" class="button">Shiny hover effect!</a>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f1f1f1;
+    }
+
+    .social-buttons a {
+        display: inline-flex;
+        text-decoration: none;
+        font-size: 18px;
+        width: 60px;
+        height: 60px;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0 8px;
+    }
+
+    .social-buttons a::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(45deg, #22a6b3, #30336b);
+        border-radius: 50%;
+        z-index: -1;
+        transition: 0.3s ease-in;
+    }
+
+    .social-buttons a:hover::before {
+        transform: scale(0);
+    }
+
+    .social-buttons a i {
+        transition: 0.3s ease-in;
+    }
+
+    .social-buttons a:hover i {
+        background: linear-gradient(45deg, #22a6b3, #30336b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(2.2);
+    }
+</style>
+
+<body>
+   <div class="social-buttons">
+       <a href="#"><i class="fab fa-facebook-f"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fab fa-youtube"></i></a>
+       <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+   </div>
+</body>
+
+</html>
